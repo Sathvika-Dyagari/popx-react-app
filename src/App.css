@@ -1,38 +1,270 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #f7f8f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+  width: 100%;
+  max-width: 375px;
+  min-height: 100vh;
+  background-color: white;
+  padding: 25px;
+}
+
+h1 {
+  color: #1d2226;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #6b6b6b;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  color: #6c25ff;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.createBtn {
+  background-color: #6c25ff;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.loginBtn {
+  background-color: #cebafb;
+  color: black;
+  margin-top: 15px;
+}
+
+.grayBtn {
+  background-color: #cbcbcb;
+  color: white;
+  margin-top: 20px;
+  cursor: not-allowed;
+}
+
+.radioGroup {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.radioOption {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 20px;
+  color: black;
+}
+
+.radioOption input {
+  accent-color: #6c25ff;
+}
+
+.required {
+  color: red;
+}
+
+.accountHeading {
+  font-size: 22px;
+  color: #1d2226;
+  margin-bottom: 20px;
+}
+
+.accountCard {
+  background-color: #f7f8f9;
+  padding: 20px;
+  border-bottom: 2px dashed #d9d9d9;
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.profileImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cameraIcon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background-color: #6c25ff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.profileInfo h3 {
+  color: #1d2226;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.profileInfo p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.description {
+  margin-top: 20px;
+  color: #1d2226;
+  line-height: 1.6;
+  font-size: 14px;
+  text-align: justify;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 12px;
+  }
+
+  .profileImage {
+    width: 70px;
+    height: 70px;
+  }
+
+  .profileInfo h3 {
+    font-size: 16px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.welcomeContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.welcomeContent {
+  margin-bottom: 30px;
+}
+
+.pageIndicator {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.pageIndicator span {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  color: #555;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-size: 12px;
+}
+
+.activeCircle {
+  background: #6c25ff !important;
+  color: white !important;
+}
+
+.welcomeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100vh;
+}
+
+.welcomeContent {
+  margin-bottom: 20px;
+}
+
+.welcomeContent h1 {
+  font-size: 30px;
+  color: #1d2226;
+  margin-bottom: 10px;
+}
+
+.welcomeContent p {
+  color: #6b6b6b;
+  margin-bottom: 25px;
+}
+
+.createBtn {
+  background-color: #6c25ff;
   color: white;
+  margin-bottom: 12px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loginBtn {
+  background-color: #cebafb;
+  color: black;
 }
