@@ -16,8 +16,7 @@ function Login() {
         <h1>Signin to your PopX account</h1>
 
         <p>
-          Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
+          Welcome back! Please enter your email and password to access your account.
         </p>
 
         <label>Email Address</label>

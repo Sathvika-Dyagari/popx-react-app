@@ -1,5 +1,6 @@
-import "../App.css";
+ import "../App.css";
 import { FaCamera } from "react-icons/fa";
+import profileImg from "./image.jpeg";
 
 function Account() {
   return (
@@ -15,7 +16,7 @@ function Account() {
 
             <img
               className="profileImage"
-              src="https://randomuser.me/api/portraits/women/68.jpg"
+              src={profileImg}
               alt="profile"
             />
 
@@ -26,16 +27,14 @@ function Account() {
           </div>
 
           <div className="profileInfo">
-            <h3>Marry Doe</h3>
-            <p>Marry@gmail.com</p>
+            <h3>Sathvika Dyagari</h3>
+            <p>sathvika@gmail.com</p>
           </div>
 
         </div>
 
         <p className="description">
-          Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr,
-          Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et
-          Dolore Magna Aliquyam Erat, Sed Diam.
+          I am a motivated and detail-oriented fresher who enjoys learning new technologies and building responsive web applications using React.
         </p>
 
       </div>

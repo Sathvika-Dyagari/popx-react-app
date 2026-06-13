@@ -10,8 +10,7 @@ function Welcome() {
         <h1>Welcome to PopX</h1>
 
         <p>
-          Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
+          Welcome to PopX. Create your account, manage your profile, and enjoy a smooth and simple user experience designed for you.
         </p>
 
         <button
